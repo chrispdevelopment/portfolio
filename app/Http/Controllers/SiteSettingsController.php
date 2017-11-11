@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use Illuminate\Http\Response;
 use Portfolio\Http\Requests;
+use Portfolio\Packages\Settings\SettingsObject;
 use Prettus\Validator\Contracts\ValidatorInterface;
 use Prettus\Validator\Exceptions\ValidatorException;
 use Portfolio\Http\Requests\SiteSettingCreateRequest;

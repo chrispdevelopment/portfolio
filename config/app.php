@@ -177,6 +177,11 @@ return [
         Portfolio\Providers\EventServiceProvider::class,
         Portfolio\Providers\RouteServiceProvider::class,
 
+        /*
+         * Setting Service
+         */
+        \Portfolio\Packages\Settings\SettingsServiceProvider::class,
+
     ],
 
     /*
@@ -225,6 +230,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Settings' => \app\Packages\Settings\Settings::class,
 
     ],
 

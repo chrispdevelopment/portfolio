@@ -9,5 +9,7 @@ use Prettus\Repository\Contracts\RepositoryInterface;
  * @package namespace Portfolio\Repositories;
  */
 interface SiteSettingRepository extends RepositoryInterface {
-    //
+
+    function getAllSettings();
+
 }

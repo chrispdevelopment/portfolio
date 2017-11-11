@@ -10,15 +10,15 @@ use Prettus\Repository\Presenter\FractalPresenter;
  *
  * @package namespace Portfolio\Presenters;
  */
-class SiteSettingPresenter extends FractalPresenter
-{
+class SiteSettingPresenter extends FractalPresenter {
+
     /**
      * Transformer
      *
      * @return \League\Fractal\TransformerAbstract
      */
-    public function getTransformer()
-    {
+    public function getTransformer() {
         return new SiteSettingTransformer();
     }
+
 }

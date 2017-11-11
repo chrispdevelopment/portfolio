@@ -2,6 +2,7 @@
 
 namespace Portfolio\Repositories;
 
+use Illuminate\Support\Collection;
 use Portfolio\Presenters\SiteSettingPresenter;
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
@@ -34,19 +35,45 @@ class SiteSettingRepositoryEloquent extends BaseRepository implements SiteSettin
     }
 
     /**
-     * Transform data to standard output
-     *
-     * @return string
-     */
-    public function presenter() {
-        return SiteSettingPresenter::class;
-    }
-
-    /**
      * Boot up the repository, pushing criteria
      */
     public function boot() {
         $this->pushCriteria(app(RequestCriteria::class));
+    }
+
+    /**
+     * Get all settings with their values converted to the correct variable type
+     *
+     * @return \Illuminate\Support\Collection|SiteSetting[]
+     */
+    public function getAllSettings() {
+
+        $settings = $this->with('variableType')->all();
+
+        return $this->settingValueTransform($settings);
+
+    }
+
+    /**
+     * Convert the values for each entry in the collection into the correct variable type
+     *
+     * @param \Illuminate\Support\Collection|SiteSetting[] $settings
+     *
+     * @return \Illuminate\Support\Collection|SiteSetting[]
+     */
+    private function settingValueTransform(Collection $settings) {
+
+        return $settings->transform(function($setting) {
+            /** @var SiteSetting $setting */
+            $settingValue = $setting->value;
+
+            settype($settingValue, $setting->variableType->name);
+
+            $setting->value = $settingValue;
+
+            return $setting;
+        });
+
     }
 
 }
