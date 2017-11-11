@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Route::resource('variable-types', 'VariableTypesController');
+//Route::resource('site-settings', 'SiteSettingsController');
