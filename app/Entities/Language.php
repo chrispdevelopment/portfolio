@@ -22,6 +22,8 @@ class Language extends Model implements Transformable {
 
     use TransformableTrait;
 
+    public $timestamps = false;
+
     protected $fillable = [
         'name',
     ];

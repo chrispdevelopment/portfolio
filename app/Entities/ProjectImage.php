@@ -23,6 +23,8 @@ class ProjectImage extends Model implements Transformable {
 
     use TransformableTrait;
 
+    public $timestamps = false;
+
     protected $fillable = [
         'project_id',
         'image_path',

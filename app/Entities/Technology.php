@@ -24,6 +24,8 @@ class Technology extends Model implements Transformable {
 
     use TransformableTrait;
 
+    public $timestamps = false;
+
     protected $fillable = [
         'name',
         'image_path',
