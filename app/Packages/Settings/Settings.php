@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Packages\Settings;
+namespace Portfolio\Packages\Settings;
 
 use Illuminate\Support\Facades\Facade;
 use Portfolio\Packages\Settings\SettingsObject;

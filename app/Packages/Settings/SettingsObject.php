@@ -8,7 +8,7 @@ use Portfolio\Packages\BaseObject;
  * Class Settings
  * @package Portfolio\Packages\Settings
  *
- * @property string logo_image_path
+ * @property string logo_image
  * @property string title
  * @property string sub_title
  * @property string intro

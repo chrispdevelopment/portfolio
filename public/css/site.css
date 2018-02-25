@@ -1,0 +1,87 @@
+body {
+    font-family: 'Roboto Slab', serif;
+}
+
+.nav {
+    background-color: #000000;
+}
+
+.nav a {
+    color: #ffffff;
+    font-family: 'Roboto Slab', serif;
+}
+
+.navbar-brand {
+    display: flex;
+}
+
+.navbar-brand a {
+    color: #ffffff;
+    font-family: 'Roboto Slab', serif;
+}
+
+.navbar-brand-text {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.navbar-brand-text div {
+    width: 100%;
+}
+
+.navbar-brand-image {
+    font-size: 30px;
+    margin-right: 6px;
+    margin-left: 20px;
+}
+
+.navbar-brand-text {
+    font-size: 14px;
+    margin-right: 6px;
+}
+
+.navbar-nav {
+    margin-right: 20px;
+}
+
+.about {
+    background: #2fa6fe;
+    background: -moz-linear-gradient(left, #2fa6fe 0%, #F7F7F7 50%, #2fa6fe 100%);
+    background: -webkit-linear-gradient(left, #2fa6fe 0%,#F7F7F7 50%,#2fa6fe 100%);
+    background: linear-gradient(to right, #2fa6fe 0%,#F7F7F7 50%,#2fa6fe 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2fa6fe', endColorstr='#2fa6fe',GradientType=1 );
+}
+
+.logo {
+    color: #000000;
+    font-family: 'Roboto Slab', serif;
+    font-size: 60px;
+}
+
+.title {
+    color: #000000;
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+}
+
+.intro {
+    margin-bottom: 20px;
+    background-color: #F7F7F7;
+    border-radius: 10px;
+    padding: 10px;
+    -webkit-box-shadow: 0 0 4px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0 0 4px 2px rgba(0,0,0,0.75);
+    box-shadow: 0 0 4px 2px rgba(0,0,0,0.75);
+}
+
+.collapse-extra-info {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.collapse-extra-info a, .collapse-extra-info a:hover {
+    color: #000000;
+    text-decoration: none;
+    outline: none;
+}
