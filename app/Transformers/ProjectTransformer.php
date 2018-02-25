@@ -21,6 +21,7 @@ class ProjectTransformer extends TransformerAbstract {
 
         return [
             'id' => (int)$model->id,
+            'project_id' => $model->project_id,
             'name' => $model->name,
             'description' => $model->description,
             'git_link' => $model->git_link,

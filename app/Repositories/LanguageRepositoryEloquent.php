@@ -8,6 +8,7 @@ use Prettus\Repository\Criteria\RequestCriteria;
 use Portfolio\Repositories\LanguageRepository;
 use Portfolio\Entities\Language;
 use Portfolio\Validators\LanguageValidator;
+use Prettus\Repository\Exceptions\RepositoryException;
 
 /**
  * Class LanguageRepositoryEloquent
@@ -44,6 +45,7 @@ class LanguageRepositoryEloquent extends BaseRepository implements LanguageRepos
 
     /**
      * Boot up the repository, pushing criteria
+     * @throws RepositoryException
      */
     public function boot() {
         $this->pushCriteria(app(RequestCriteria::class));

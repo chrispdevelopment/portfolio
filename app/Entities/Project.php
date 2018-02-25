@@ -13,6 +13,7 @@ use Prettus\Repository\Traits\TransformableTrait;
  *
  * @property int $id
  * @property int $language_id
+ * @property string $project_id
  * @property string $name
  * @property string $description
  * @property string|null $git_link
@@ -26,6 +27,7 @@ use Prettus\Repository\Traits\TransformableTrait;
  * @method static Builder|Project whereLanguageId($value)
  * @method static Builder|Project whereName($value)
  * @method static Builder|Project whereSiteLink($value)
+ * @method static Builder|Project whereProjectId($value)
  * @mixin \Eloquent
  */
 class Project extends Model implements Transformable {
@@ -36,6 +38,7 @@ class Project extends Model implements Transformable {
 
     protected $fillable = [
         'language_id',
+        'project_id',
         'name',
         'description',
         'git_link',

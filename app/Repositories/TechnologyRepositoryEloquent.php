@@ -44,6 +44,7 @@ class TechnologyRepositoryEloquent extends BaseRepository implements TechnologyR
 
     /**
      * Boot up the repository, pushing criteria
+     * @throws \Prettus\Repository\Exceptions\RepositoryException
      */
     public function boot() {
         $this->pushCriteria(app(RequestCriteria::class));
